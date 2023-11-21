@@ -1,6 +1,6 @@
 # Deployment-Lab1
 
-### Assignment: Deploying a Machine Learning Model with FastAPI
+### Lab: Deploying a Machine Learning Model with FastAPI
 
 ### Objective:
 Your task is to create a FastAPI application that deploys a machine learning model along with a preprocessing step (such as: StandardScaler). Additionally, you need to implement a FastAPI router to create both an API and a simple web application that displays predictions.
