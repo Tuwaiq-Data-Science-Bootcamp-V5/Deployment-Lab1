@@ -11,9 +11,10 @@ Your task is to create a FastAPI application that deploys a machine learning mod
 #### Implement FastAPI Router for API:
 - Create a FastAPI router using the `APIRouter()` function.
 #### Define the following endpoint:
-- **/:** returns HTMLResponse Welcoming to the website.
-- **/api/predict:** Accepts input data and returns the prediction.
-- **/predict:** Accepts input data and returns HTMLResponse with results.
+- GET: **/:** returns HTMLResponse Welcoming to the website.
+- POST: **/api/predict:** Accepts input data and returns the prediction.
+- GET: **/predict:** returns HTMLResponse.
+- POST: **/predict:** Accepts input data and returns HTMLResponse with results.
 
 #### Implement Web Application:
 - - Develop a web application using FastAPI's HTMLResponse.
@@ -28,6 +29,8 @@ Your task is to create a FastAPI application that deploys a machine learning mod
 
 ## Tips:
 - Refer to the FastAPI documentation for guidance on routing and HTMLResponse: FastAPI Documentation
-- Use the uvicorn command to run your FastAPI application: uvicorn main:app --reload
+- Use the uvicorn command to run your FastAPI application: `uvicorn main:app --reload`
 - Ensure your pre-trained model file is accessible and loaded properly in your FastAPI application.
 
+- **The Output:**
+<img width="1464" alt="Screenshot 1445-05-09 at 2 22 47 PM" src="https://github.com/Tuwaiq-Data-Science-Bootcamp-V5/Deployment-Lab1/assets/80198620/55ce4abe-f58d-4fa4-997b-aa2f6df13355">
