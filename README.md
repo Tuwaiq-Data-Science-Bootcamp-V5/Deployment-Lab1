@@ -1,5 +1,3 @@
-# Deployment-Lab1
-
 ### Lab: Deploying a Machine Learning Model with FastAPI
 
 ### Obectives:
@@ -33,4 +31,4 @@ Your task is to create a FastAPI application that deploys a machine learning mod
 - Ensure your pre-trained model file is accessible and loaded properly in your FastAPI application.
 
 - **The Output:**
-<img width="1464" alt="Screenshot 1445-05-09 at 2 22 47 PM" src="https://github.com/Tuwaiq-Data-Science-Bootcamp-V5/Deployment-Lab1/assets/80198620/55ce4abe-f58d-4fa4-997b-aa2f6df13355">
+<img src="https://i.imgur.com/TLiYpFe.png"/>
