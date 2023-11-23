@@ -2,8 +2,8 @@
 
 ### Lab: Deploying a Machine Learning Model with FastAPI
 
-### Objective:
-Your task is to create a FastAPI application that deploys a machine learning model along with a preprocessing step (such as: StandardScaler). Additionally, you need to implement a FastAPI router to create both an API and a simple web application that displays predictions.
+### Obectives:
+Your task is to create a FastAPI application that deploys a machine learning model along with a preprocessing step (such as: StandardScaler or any variable that relevant). Additionally, you need to implement a FastAPI router to create both an API and a simple web application that displays predictions.
 
 ### Requirements:
 #### Use a Pre-trained Model:
@@ -21,16 +21,6 @@ Your task is to create a FastAPI application that deploys a machine learning mod
 - - Allow users to input data, submit it, and view the prediction.
 
 - - Use the root path (/) for the home page of the web application.
-
-<hr>
-
-- FastAPI (Home Page: root) /
-  - [API](#api) (APIs: with link /api)
-  - - predict (/api/predict)
-  - [webapp](#webapp) (HTMLResponse with root link)
-  - - predict (/predict)
-
-<hr>
 
 ## Submission:
 - You should submit your code and your model and all that included in preprocessing process (such as: `StandardScalar` ..etc).
