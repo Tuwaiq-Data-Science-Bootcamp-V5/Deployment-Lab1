@@ -1,0 +1,15 @@
+{% include "header.html" %}
+<h1>Submit Soil Data</h1>
+<form action="/predict" method="post">
+    <label for="N">Nitrogen content ratio in the soil:</label>
+    <input type="number" id="N" name="N" required><br>
+    <label for="P">Phosphorous content ratio in the soil:</label>
+    <input type="number" id="P" name="P" required><br>
+    <label for="K">Potassium content ratio in the soil:</label>
+    <input type="number" id="K" name="K" required><br>
+    <label for="ph">ph value of the soil:</label>
+    <input type="number" step="any" id="ph" name="ph" required><br>
+    <button type="submit">Submit</button>
+</form>
+
+{% include "footer.html" %}
