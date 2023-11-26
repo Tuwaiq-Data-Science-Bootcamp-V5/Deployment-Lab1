@@ -3,21 +3,21 @@
 ## the steps:
 <center>
 
-![step 1](1.PNG){:height=200;width=600}
+![step 1](1.PNG)
 </center>
 <center>
 
-![step 2](2.PNG){:height=200;width=600}
+![step 2](2.PNG)
 </center>
 <center>
 
-![step 3](3.PNG){:height=200;width=600}
+![step 3](3.PNG)
 </center>
 <center>
 
-![step 4](4.PNG){:height=200;width=600}
+![step 4](4.PNG)
 </center>
 
-![step 5](5.PNG){:height=200;width=600}
+![step 5](5.PNG)
 </center>
 
