@@ -1,0 +1,98 @@
+<!-- templates/predict_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Data to Predict</h1>
+    <form method="post" action="/predict">
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="sex">Sex (1 = male; 0 = female):</label>
+        <input type="number" name="sex" required><br>
+
+        <label for="cp">Chest pain (typical, asymptotic, nonanginal, nontypical):</label>
+        <input type="number" name="cp" required><br>
+
+        <label for="trestbps">Resting Blood Pressure:</label>
+        <input type="number" name="trestbps" required><br>
+
+        <label for="chol">Serum Cholesterol in mg/dl:</label>
+        <input type="number" name="chol" required><br>
+
+        <label for="fbs">Fasting blood sugar > 120 mg/dl (1 = true; 0 = false):</label>
+        <input type="number" name="fbs" required><br>
+
+        <label for="restecg">Resting Electrocardiographic Results:</label>
+        <input type="number" name="restecg" required><br>
+
+        <label for="thalach">Maximum Heart Rate Achieved:</label>
+        <input type="number" name="thalach" required><br>
+
+        <label for="exang">Exercise Induced Angina:</label>
+        <input type="number" name="exang" required><br>
+
+        <label for="oldpeak">ST depression induced by exercise relative to rest:</label>
+        <input type="number" name="oldpeak" step="0.1" required><br>
+
+        <label for="slope">Slope of the Peak Exercise ST Segment:</label>
+        <input type="number" name="slope" required><br>
+
+        <label for="ca">Number of major vessels colored by flourosopy (0 - 3):</label>
+        <input type="number" name="ca" step="0.1" required><br>
+
+        <label for="thal">(3 = normal; 6 = fixed defect; 7 = reversable defect):</label>
+        <input type="number" name="thal" step="0.1" required><br>
+
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

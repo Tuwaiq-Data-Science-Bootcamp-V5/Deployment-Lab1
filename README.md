@@ -1,34 +1,23 @@
-### Lab: Deploying a Machine Learning Model with FastAPI
+## the dataset
+[Press here](https://www.kaggle.com/datasets/volodymyrgavrysh/heart-disease)
+## the steps:
+<center>
 
-### Obectives:
-Your task is to create a FastAPI application that deploys a machine learning model along with a preprocessing step (such as: StandardScaler or any variable that relevant). Additionally, you need to implement a FastAPI router to create both an API and a simple web application that displays predictions.
+![step 1](1.PNG){:height=200;width=600}
+</center>
+<center>
 
-### Requirements:
-#### Use a Pre-trained Model:
-- Utilize the machine learning model you trained in the last lab.
-#### Implement FastAPI Router for API:
-- Create a FastAPI router using the `APIRouter()` function.
-#### Define the following endpoint:
-- GET: **/:** returns HTMLResponse Welcoming to the website.
-- POST: **/api/predict:** Accepts input data and returns the prediction.
-- GET: **/predict:** returns HTMLResponse.
-- POST: **/predict:** Accepts input data and returns HTMLResponse with results.
+![step 2](2.PNG){:height=200;width=600}
+</center>
+<center>
 
-#### Implement Web Application:
-- - Develop a web application using FastAPI's HTMLResponse.
+![step 3](3.PNG){:height=200;width=600}
+</center>
+<center>
 
-- - Allow users to input data, submit it, and view the prediction.
+![step 4](4.PNG){:height=200;width=600}
+</center>
 
-- - Use the root path (/) for the home page of the web application.
+![step 5](5.PNG){:height=200;width=600}
+</center>
 
-## Submission:
-- You should submit your code and your model and all that included in preprocessing process (such as: `StandardScalar` ..etc).
-- Also, You should submit your lab that you choose to deploy.
-
-## Tips:
-- Refer to the FastAPI documentation for guidance on routing and HTMLResponse: FastAPI Documentation
-- Use the uvicorn command to run your FastAPI application: `uvicorn main:app --reload`
-- Ensure your pre-trained model file is accessible and loaded properly in your FastAPI application.
-
-- **The Output:**
-<img src="https://i.imgur.com/TLiYpFe.png"/>
