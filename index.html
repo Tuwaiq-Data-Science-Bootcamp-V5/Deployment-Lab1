@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application</title>
+    </head>
+    <body>
+        <h1>My application</h1>
+        <form action="/api/predict" method="post">
+            <label for="sepal_length"></label>
+            <input type="number" name="sepal_length" id="sepal_length" step="any" required>
+            <br>
+            <label for="sepal_width"></label>
+            <input type="number" name="sepal_width" id="sepal_width" step="any" required>
+            <br>
+            <label for="petal_length"></label>
+            <input type="number" name="petal_length" id="petal_length" step="any" required>
+            <br><label for="petal_width"></label>
+            <input type="number" name="petal_width" id="petal_width" step="any" required>
+            <br>
+           
+            <input type="submit" value="Predict">
+        </form>
+        <h2>Result :</h2>
+        <div id="prediction"></div>
+        <script>
+            document.querySelector('form').addEventListener('submit', async function(e){
+                e.preventDefault();
+                const form = new FormData(e.target);
+                const response = await fetch('/api/predict/',{
+                    method: 'POST',
+                    boddy: form
+                });
+                const data = await response.json();
+                document.getElementById('prediction').textContent=`Prediction: ${data.prediction}`;
+            });
+        </script>
+
+    </body>
+</html>
