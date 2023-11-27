@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Application</title>
+</head>
+<body>
+
+    <h1>FastAPI Application</h1>
+    <form action="/api/predict" method="post">
+        <label for="N">N:</label>
+        <input type="number" name="N" id="N" step="any" required>
+        <br><br>
+        <label for="P">P:</label>
+        <input type="number" name="P" id="P" step="any" required>
+        <br><br>
+        <label for="K">K:</label>
+        <input type="number" name="K" id="K" step="any" required>
+        <br><br>
+        <label for="ph">ph:</label>
+        <input type="number" name="ph" id="ph" step="any" required>
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    <h2>Results:</h2>
+    <div id="prediction"></div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const form = new FormData(e.target);
+            const response = await fetch('/api/predict', {
+                method: 'POST',
+                body: form
+            });
+            const data = await response.json();
+
+            document.getElementById('prediction').textContent = `Prediction: ${data.prediction}`;
+        });
+    </script>
+</body>
+</html>
