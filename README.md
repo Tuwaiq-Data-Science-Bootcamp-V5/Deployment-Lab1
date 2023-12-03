@@ -1,36 +1,26 @@
-# Deployment-Lab1
+from fastapi import FastAPI
+import pickle
+from pydantic import BaseModel
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
-### Lab: Deploying a Machine Learning Model with FastAPI
+app = FastAPI()
 
-### Obectives:
-Your task is to create a FastAPI application that deploys a machine learning model along with a preprocessing step (such as: StandardScaler or any variable that relevant). Additionally, you need to implement a FastAPI router to create both an API and a simple web application that displays predictions.
+model = pickle.load(open("model.pkl", "rb"))
 
-### Requirements:
-#### Use a Pre-trained Model:
-- Utilize the machine learning model you trained in the last lab.
-#### Implement FastAPI Router for API:
-- Create a FastAPI router using the `APIRouter()` function.
-#### Define the following endpoint:
-- GET: **/:** returns HTMLResponse Welcoming to the website.
-- POST: **/api/predict:** Accepts input data and returns the prediction.
-- GET: **/predict:** returns HTMLResponse.
-- POST: **/predict:** Accepts input data and returns HTMLResponse with results.
 
-#### Implement Web Application:
-- - Develop a web application using FastAPI's HTMLResponse.
+from pydantic import BaseModel
 
-- - Allow users to input data, submit it, and view the prediction.
+class Input(BaseModel):
+    ph: int
+    N: int
+    P: int
+    K: int
 
-- - Use the root path (/) for the home page of the web application.
 
-## Submission:
-- You should submit your code and your model and all that included in preprocessing process (such as: `StandardScalar` ..etc).
-- Also, You should submit your lab that you choose to deploy.
+@app.post("/predict")
+def predict(input_data: Input):
+    data = [[input_data.ph, input_data.N,input_data.P, input_data.K]]
+    prediction = model.predict(data)
 
-## Tips:
-- Refer to the FastAPI documentation for guidance on routing and HTMLResponse: FastAPI Documentation
-- Use the uvicorn command to run your FastAPI application: `uvicorn main:app --reload`
-- Ensure your pre-trained model file is accessible and loaded properly in your FastAPI application.
-
-- **The Output:**
-<img width="1464" alt="Screenshot 1445-05-09 at 2 22 47 PM" src="https://github.com/Tuwaiq-Data-Science-Bootcamp-V5/Deployment-Lab1/assets/80198620/55ce4abe-f58d-4fa4-997b-aa2f6df13355">
+    return {"prediction": prediction}
